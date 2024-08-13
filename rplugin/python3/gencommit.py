@@ -10,3 +10,8 @@ class ExPlugin(object):
     @pynvim.function("ExPlugEcho", sync=True)
     def echo(self, args):
         self.nvim.command(f"echomsg 'From config: {self.cfg['path']}'")
+
+    @pynvim.command("GenCommit", nargs="*", range="")
+    def gen_commit_command(self, args, range):
+        # 实现你的命令逻辑
+        pass
